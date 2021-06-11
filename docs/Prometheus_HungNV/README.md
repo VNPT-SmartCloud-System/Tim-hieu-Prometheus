@@ -20,6 +20,7 @@
 4. [Cài đặt Node Exporter trên Windows](./4._Install_Node_Exporter_on_Windows.md)
 5. [Cài đặt Node Exporter trên Ubuntu](./5._Install_Node_Exporter_on_Ubuntu.md)
 6. [Cài đặt SNMP Exporter monitor iDRAC](./6._Install_SNMP_monitor_iDRAC.md)
+7. [Cài đặt SNMP Exporter monitor Switch](./11._Install_SNMP_monitor_switch.md)
 
 ### 2.2. Grafana Dashboard
 
