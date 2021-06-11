@@ -24,4 +24,4 @@
 ### 2.2. Grafana Dashboard
 
 1. [Import Json để tạo dashboard cho Node Exporter](7._Import_dashboard_for_node_exporter_from_json_file.md)
-2. [Import Json để tạo dashboard cho SNMP Exporter (iDRAC)]()
+2. [Import Json để tạo dashboard cho SNMP Exporter (iDRAC)](10._Import_dashboard_for_iDRAC_from_json_file.md)
