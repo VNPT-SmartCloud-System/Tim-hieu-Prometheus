@@ -36,3 +36,4 @@
 1. [File Json template cho Dashboard Grafana](./Exporter_Dashboard_Json)
 2. [File module cho SNMP Exporter](./SNMP_Exporter)
 3. [Một số rule cảnh báo cho hệ thống](./16._Mot_so_rule_canh_bao_cho_he_thong.md)
+4. [Lưu trữ và sizing cho prometheus](./17._Storage_Prometheus.md)
