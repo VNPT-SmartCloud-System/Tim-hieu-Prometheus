@@ -59,7 +59,7 @@
   "gnetId": 12538,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1623748699372,
+  "iteration": 1624420200927,
   "links": [],
   "panels": [
     {
@@ -84,7 +84,7 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
+        "w": 4,
         "x": 0,
         "y": 0
       },
@@ -671,8 +671,8 @@
         "alignAsTable": true,
         "avg": true,
         "current": true,
-        "max": false,
-        "min": false,
+        "max": true,
+        "min": true,
         "rightSide": false,
         "show": true,
         "sideWidth": 300,
@@ -702,7 +702,7 @@
           "instant": false,
           "interval": "",
           "intervalFactor": 1,
-          "legendFormat": "memory_usage_bytes",
+          "legendFormat": "cpu_usage",
           "refId": "A"
         }
       ],
@@ -792,6 +792,8 @@
         "alignAsTable": true,
         "avg": true,
         "current": true,
+        "hideEmpty": false,
+        "hideZero": false,
         "max": false,
         "min": false,
         "rightSide": false,
@@ -828,7 +830,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(irate(libvirt_domain_block_stats_write_bytes_total{name=~\"$vm_name\"}[5m]))",
+          "expr": "sum(irate(libvirt_domain_block_stats_write_bytes_total{domain=~\"$vm_name\"}[5m]))",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -943,7 +945,7 @@
         },
         {
           "exemplar": true,
-          "expr": "sum(irate(libvirt_domain_block_stats_write_requests_total{name=~\"$vm_name\"}[5m]))",
+          "expr": "sum(irate(libvirt_domain_block_stats_write_requests_total{domain=~\"$vm_name\"}[5m]))",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -1252,7 +1254,7 @@
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
-        "h": 7,
+        "h": 13,
         "w": 12,
         "x": 0,
         "y": 34
@@ -1265,7 +1267,7 @@
         "current": true,
         "max": false,
         "min": false,
-        "rightSide": true,
+        "rightSide": false,
         "show": true,
         "sideWidth": 300,
         "total": false,
@@ -1487,7 +1489,7 @@
     ]
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {
@@ -1505,6 +1507,6 @@
   },
   "timezone": "",
   "title": "Libvirt Dashboard",
-  "uid": "242K89ZMz",
-  "version": 8
+  "uid": "242K89ZMd",
+  "version": 7
 }

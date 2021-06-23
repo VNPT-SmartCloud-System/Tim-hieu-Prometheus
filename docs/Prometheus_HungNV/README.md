@@ -27,9 +27,9 @@
 
 ### 2.2. Grafana Dashboard
 
-1. [Import Json để tạo dashboard cho Node Exporter](7._Import_dashboard_for_node_exporter_from_json_file.md)
-2. [Import Json để tạo dashboard cho SNMP Exporter](10._Import_dashboard_for_snmp_exporter_from_json_file.md)
-3. [Import Json để tạo dashboard cho Libvirt Exporter](/13._Import_dashboard_for_libvirt_exporter_from_json_file.md)
+1. [Import Json để tạo dashboard cho Node Exporter](./7._Import_dashboard_for_node_exporter_from_json_file.md)
+2. [Import Json để tạo dashboard cho SNMP Exporter](./10._Import_dashboard_for_snmp_exporter_from_json_file.md)
+3. [Import Json để tạo dashboard cho Libvirt Exporter](./13._Import_dashboard_for_libvirt_exporter_from_json_file.md)
 
 ### 2.3. Note Extend
 
