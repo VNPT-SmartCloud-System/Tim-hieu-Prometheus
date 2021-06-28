@@ -49,6 +49,7 @@ groups:
     annotations:
       summary: "Unusual network throughput in (instance {{ $labels.instance }})"
       description: "Host network interfaces are probably receiving too much data (> 800 MB/s)\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
+
 # Network throughout out bất thường 
   - alert: HostUnusualNetworkThroughputOutWarning
     expr: sum by (instance) (irate(node_network_transmit_bytes_total[5m])) / 1024 / 1024 > 500
@@ -121,3 +122,24 @@ groups:
       summary: "CPU load hight (instance {{ $labels.instance }})"
       description: "CPU load is > 80%\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
 
+# Host out of inodes
+# Disk gần hết các inodes có sẵn (< 10% left)
+  - alert: HostOutOfInodes
+    expr: node_filesystem_files_free{mountpoint ="/"} / node_filesystem_files{mountpoint="/"} * 100 < 10 and ON (instance, device, mountpoint) node_filesystem_readonly{mountpoint="/"} == 0
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: Host out of inodes (instance {{ $labels.instance }})
+      description: "Disk is almost running out of available inodes (< 10% left)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+
+# Host kernel version deviations
+# Có nhiều hơn 1 phiên bản kernel đang chạy
+  - alert: HostKernelVersionDeviations
+    expr: count(sum(label_replace(node_uname_info, "kernel", "$1", "release", "([0-9]+.[0-9]+.[0-9]+).*")) by (kernel)) > 1
+    for: 1h
+    labels:
+      severity: warning
+    annotations:
+      summary: Host kernel version deviations (instance {{ $labels.instance }})
+      description: "Different kernel versions are running\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
