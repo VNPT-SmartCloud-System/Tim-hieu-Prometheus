@@ -51,7 +51,7 @@
   "gnetId": 12492,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1623635551374,
+  "iteration": 1625633265520,
   "links": [],
   "panels": [
     {
@@ -1556,7 +1556,7 @@
     "list": [
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "Prometheus-1",
           "value": "Prometheus-1"
         },
@@ -1569,6 +1569,7 @@
         "name": "source",
         "options": [],
         "query": "prometheus",
+        "queryValue": "",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,

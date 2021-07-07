@@ -1,5 +1,14 @@
 {
-  "__inputs": [],
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS-1",
+      "label": "Prometheus-1",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
   "__requires": [
     {
       "type": "grafana",
@@ -49,7 +58,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1623382945262,
+  "iteration": 1625633097597,
   "links": [
     {
       "icon": "external link",
@@ -61,18 +70,341 @@
   ],
   "panels": [
     {
+      "columns": [],
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "fontSize": "100%",
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 49,
+      "links": [],
+      "pageSize": null,
+      "scroll": true,
+      "showHeader": true,
+      "sort": {
+        "col": 7,
+        "desc": false
+      },
+      "styles": [
+        {
+          "$$hashKey": "object:944",
+          "alias": "PS Number",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "powerSupplyIndex",
+          "thresholds": [
+            ""
+          ],
+          "type": "string",
+          "unit": "short",
+          "valueMaps": [
+            {
+              "$$hashKey": "object:573",
+              "text": "PS1",
+              "value": "1"
+            },
+            {
+              "$$hashKey": "object:575",
+              "text": "PS2",
+              "value": "2"
+            },
+            {
+              "$$hashKey": "object:577",
+              "text": "PS3",
+              "value": "3"
+            },
+            {
+              "$$hashKey": "object:579",
+              "text": "PS4",
+              "value": "4"
+            },
+            {
+              "$$hashKey": "object:581",
+              "text": "PS5",
+              "value": "5"
+            },
+            {
+              "$$hashKey": "object:583",
+              "text": "PS6",
+              "value": "6"
+            }
+          ]
+        },
+        {
+          "$$hashKey": "object:237",
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "__name__",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:248",
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "job",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:259",
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #A",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:270",
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "adGroup",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:281",
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "adUser",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:384",
+          "alias": "Input Wattage",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "Value #B",
+          "thresholds": [],
+          "type": "number",
+          "unit": "short"
+        },
+        {
+          "$$hashKey": "object:396",
+          "alias": "",
+          "align": "auto",
+          "colorMode": null,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(237, 129, 40, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "dateFormat": "YYYY-MM-DD HH:mm:ss",
+          "decimals": 2,
+          "mappingType": 1,
+          "pattern": "powerSupplychassisIndex",
+          "thresholds": [],
+          "type": "hidden",
+          "unit": "short"
+        }
+      ],
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "powerSupplyIndex{instance=~\"$node\"}",
+          "format": "table",
+          "hide": false,
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        },
+        {
+          "exemplar": true,
+          "expr": "powerSupplyRatedInputWattage{instance=~\"$node\"}",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
+        }
+      ],
+      "title": "Panel Title",
+      "transform": "table",
+      "type": "table-old"
+    },
+    {
       "collapsed": false,
       "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 6
       },
       "id": 24,
       "panels": [],
       "title": "Server basic information",
       "type": "row"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": false,
+      "colorPostfix": false,
+      "colorPrefix": false,
+      "colorValue": true,
+      "colors": [
+        "#299c46",
+        "#FA6400",
+        "#d44a3a"
+      ],
+      "datasource": "${DS_PROMETHEUS-1}",
+      "decimals": 1,
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "ms",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 7
+      },
+      "id": 40,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:5227",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:5228",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false,
+        "ymax": null,
+        "ymin": null
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "sysUpTime{instance=~\"$node\"} * 10",
+          "interval": "",
+          "legendFormat": "In",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Uptime",
+      "type": "singlestat",
+      "valueFontSize": "100%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:5230",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
     },
     {
       "cacheTimeout": null,
@@ -99,8 +431,8 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 0,
-        "y": 1
+        "x": 4,
+        "y": 7
       },
       "id": 4,
       "interval": null,
@@ -108,10 +440,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:3199",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:3200",
           "name": "range to text",
           "value": 2
         }
@@ -139,10 +473,13 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "count(processorDeviceIndex{hostname=\"$node\"})",
+          "exemplar": true,
+          "expr": "count(processorDeviceIndex{instance=~\"$node\"})",
           "format": "time_series",
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -152,6 +489,7 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:3202",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -184,8 +522,8 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 2,
-        "y": 1
+        "x": 6,
+        "y": 7
       },
       "id": 12,
       "interval": null,
@@ -193,10 +531,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:649",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:650",
           "name": "range to text",
           "value": 2
         }
@@ -224,10 +564,13 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(physicalDiskCapacityInMB{hostname=\"$node\"})",
+          "exemplar": true,
+          "expr": "sum(physicalDiskCapacityInMB{instance=~\"$node\"})",
           "format": "time_series",
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -237,6 +580,7 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:652",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -305,11 +649,11 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "super-light-green",
                 "value": null
               },
               {
-                "color": "green",
+                "color": "semi-dark-green",
                 "value": 3
               },
               {
@@ -333,8 +677,8 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 5,
-        "y": 1
+        "x": 9,
+        "y": 7
       },
       "id": 36,
       "options": {
@@ -356,7 +700,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "globalSystemStatus",
+          "expr": "globalSystemStatus{instance=~\"$node\"}",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -392,8 +736,8 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 8,
-        "y": 1
+        "x": 12,
+        "y": 7
       },
       "id": 30,
       "interval": null,
@@ -401,10 +745,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:1468",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:1469",
           "name": "range to text",
           "value": 2
         }
@@ -432,11 +778,14 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "physicalDiskComponentStatus{hostname=\"$node\"} == 4",
+          "exemplar": true,
+          "expr": "physicalDiskComponentStatus{instance=~\"$node\"} == 4",
           "format": "time_series",
           "hide": false,
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -446,124 +795,16 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:1471",
           "op": "=",
           "text": "OK",
           "value": "null"
         },
         {
+          "$$hashKey": "object:1472",
           "op": "=",
           "text": "FAIL",
           "value": "4"
-        }
-      ],
-      "valueName": "avg"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "#299c46",
-        "rgba(237, 129, 40, 0.89)",
-        "#d44a3a"
-      ],
-      "datasource": "$datasource",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 2,
-        "x": 11,
-        "y": 1
-      },
-      "id": 16,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "powerSupplyStatus{hostname=\"$node\", powerSupplyIndex=\"2\"}",
-          "format": "time_series",
-          "instant": true,
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
-      "thresholds": "4,6",
-      "title": "PS2",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "Other",
-          "value": "1"
-        },
-        {
-          "op": "=",
-          "text": "Unknown",
-          "value": "2"
-        },
-        {
-          "op": "=",
-          "text": "OK",
-          "value": "3"
-        },
-        {
-          "op": "=",
-          "text": "nonCritical",
-          "value": "4"
-        },
-        {
-          "op": "=",
-          "text": "Critical",
-          "value": "5"
-        },
-        {
-          "op": "=",
-          "text": "nonRecoverable",
-          "value": "6"
         }
       ],
       "valueName": "avg"
@@ -592,10 +833,10 @@
         "thresholdMarkers": true
       },
       "gridPos": {
-        "h": 6,
+        "h": 3,
         "w": 4,
-        "x": 13,
-        "y": 1
+        "x": 15,
+        "y": 7
       },
       "id": 20,
       "interval": null,
@@ -603,10 +844,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:912",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:913",
           "name": "range to text",
           "value": 2
         }
@@ -636,7 +879,8 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "amperageProbeReading{hostname=\"$node\"} > 20",
+          "exemplar": true,
+          "expr": "amperageProbeReading{instance=~\"$node\"} > 20",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -651,6 +895,7 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:915",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -719,7 +964,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "super-light-green",
                 "value": null
               },
               {
@@ -746,9 +991,9 @@
       },
       "gridPos": {
         "h": 6,
-        "w": 7,
-        "x": 17,
-        "y": 1
+        "w": 5,
+        "x": 19,
+        "y": 7
       },
       "id": 34,
       "maxDataPoints": 100,
@@ -771,7 +1016,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "temperatureProbeReading/10\n/ ignoring(temperatureProbeLocationName) group_right\ntemperatureProbeLocationName",
+          "expr": "temperatureProbeReading{instance=~\"$node\"}/10\n/ ignoring(temperatureProbeLocationName) group_right\ntemperatureProbeLocationName{instance=~\"$node\"}",
           "interval": "",
           "intervalFactor": 1,
           "legendFormat": "{{temperatureProbeLocationName}}",
@@ -779,6 +1024,133 @@
         }
       ],
       "title": "Temperature",
+      "type": "stat"
+    },
+    {
+      "cacheTimeout": null,
+      "datasource": "${DS_PROMETHEUS-1}",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [
+            {
+              "from": "",
+              "id": 1,
+              "text": "Other",
+              "to": "",
+              "type": 1,
+              "value": "1"
+            },
+            {
+              "from": "",
+              "id": 2,
+              "text": "Unknown",
+              "to": "",
+              "type": 1,
+              "value": "2"
+            },
+            {
+              "from": "",
+              "id": 3,
+              "text": "OK",
+              "to": "",
+              "type": 1,
+              "value": "3"
+            },
+            {
+              "from": "",
+              "id": 4,
+              "text": "Non-critical",
+              "to": "",
+              "type": 1,
+              "value": "4"
+            },
+            {
+              "from": "",
+              "id": 5,
+              "text": "Critical",
+              "to": "",
+              "type": 1,
+              "value": "5"
+            },
+            {
+              "from": "",
+              "id": 6,
+              "text": "Non-recoverable",
+              "to": "",
+              "type": 1,
+              "value": "6"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "super-light-green",
+                "value": null
+              },
+              {
+                "color": "semi-dark-green",
+                "value": 3
+              },
+              {
+                "color": "yellow",
+                "value": 4
+              },
+              {
+                "color": "light-red",
+                "value": 5
+              },
+              {
+                "color": "dark-red",
+                "value": 6
+              }
+            ]
+          },
+          "unit": "none"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 0,
+        "y": 10
+      },
+      "id": 44,
+      "interval": null,
+      "links": [],
+      "maxDataPoints": 1082,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "horizontal",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.5.7",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "systemStateCoolingDeviceStatusCombined",
+          "format": "time_series",
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "title": "Cooling Device Status",
       "type": "stat"
     },
     {
@@ -806,8 +1178,8 @@
       "gridPos": {
         "h": 3,
         "w": 2,
-        "x": 0,
-        "y": 4
+        "x": 4,
+        "y": 10
       },
       "id": 6,
       "interval": null,
@@ -815,10 +1187,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:3241",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:3242",
           "name": "range to text",
           "value": 2
         }
@@ -846,10 +1220,13 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(processorDeviceCoreCount{hostname=\"$node\"})",
+          "exemplar": true,
+          "expr": "sum(processorDeviceCoreCount{instance=~\"$node\"})",
           "format": "time_series",
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -859,6 +1236,7 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:3244",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -892,8 +1270,8 @@
       "gridPos": {
         "h": 3,
         "w": 3,
-        "x": 2,
-        "y": 4
+        "x": 6,
+        "y": 10
       },
       "id": 10,
       "interval": null,
@@ -901,95 +1279,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:1350",
           "name": "value to text",
           "value": 1
         },
         {
-          "name": "range to text",
-          "value": 2
-        }
-      ],
-      "maxDataPoints": 100,
-      "nullPointMode": "connected",
-      "nullText": null,
-      "postfix": "",
-      "postfixFontSize": "50%",
-      "prefix": "",
-      "prefixFontSize": "50%",
-      "rangeMaps": [
-        {
-          "from": "null",
-          "text": "N/A",
-          "to": "null"
-        }
-      ],
-      "sparkline": {
-        "fillColor": "rgba(31, 118, 189, 0.18)",
-        "full": false,
-        "lineColor": "rgb(31, 120, 193)",
-        "show": false
-      },
-      "tableColumn": "",
-      "targets": [
-        {
-          "expr": "sum(memoryDeviceSize{hostname=\"$node\"})",
-          "format": "time_series",
-          "instant": true,
-          "intervalFactor": 1,
-          "refId": "A"
-        }
-      ],
-      "thresholds": "",
-      "title": "MEMORY",
-      "type": "singlestat",
-      "valueFontSize": "80%",
-      "valueMaps": [
-        {
-          "op": "=",
-          "text": "N/A",
-          "value": "null"
-        }
-      ],
-      "valueName": "current"
-    },
-    {
-      "cacheTimeout": null,
-      "colorBackground": true,
-      "colorValue": false,
-      "colors": [
-        "#d44a3a",
-        "rgba(237, 129, 40, 0.89)",
-        "#299c46"
-      ],
-      "datasource": "$datasource",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
-      "format": "none",
-      "gauge": {
-        "maxValue": 100,
-        "minValue": 0,
-        "show": false,
-        "thresholdLabels": false,
-        "thresholdMarkers": true
-      },
-      "gridPos": {
-        "h": 3,
-        "w": 3,
-        "x": 5,
-        "y": 4
-      },
-      "id": 18,
-      "interval": null,
-      "links": [],
-      "mappingType": 1,
-      "mappingTypes": [
-        {
-          "name": "value to text",
-          "value": 1
-        },
-        {
+          "$$hashKey": "object:1351",
           "name": "range to text",
           "value": 2
         }
@@ -1018,7 +1313,98 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "systemPowerState{hostname=\"$node\"}",
+          "expr": "sum(memoryDeviceSize{instance=~\"$node\"})",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "",
+      "title": "MEMORY",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:1353",
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueName": "current"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#d44a3a",
+        "rgba(237, 129, 40, 0.89)",
+        "#56A64B"
+      ],
+      "datasource": "$datasource",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 3,
+        "x": 9,
+        "y": 10
+      },
+      "id": 18,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:723",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:724",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "systemPowerState{instance=~\"$node\"}",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -1033,16 +1419,19 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:726",
           "op": "=",
           "text": "N/A",
           "value": "null"
         },
         {
+          "$$hashKey": "object:727",
           "op": "=",
           "text": "OFF",
           "value": "3"
         },
         {
+          "$$hashKey": "object:728",
           "op": "=",
           "text": "ON",
           "value": "4"
@@ -1074,9 +1463,9 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 3,
-        "x": 8,
-        "y": 4
+        "w": 4,
+        "x": 15,
+        "y": 10
       },
       "id": 32,
       "interval": null,
@@ -1084,10 +1473,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:1424",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:1425",
           "name": "range to text",
           "value": 2
         }
@@ -1115,11 +1506,14 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "systemStateBatteryStatusCombined{hostname=\"$node\"} != 3",
+          "exemplar": true,
+          "expr": "systemStateBatteryStatusCombined{instance=~\"$node\"} != 3",
           "format": "time_series",
           "hide": false,
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
@@ -1129,11 +1523,13 @@
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:1427",
           "op": "=",
           "text": "OK",
           "value": "null"
         },
         {
+          "$$hashKey": "object:1428",
           "op": "=",
           "text": "FAIL",
           "value": "0"
@@ -1146,7 +1542,7 @@
       "colorBackground": true,
       "colorValue": false,
       "colors": [
-        "#299c46",
+        "#56A64B",
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
@@ -1165,9 +1561,9 @@
       },
       "gridPos": {
         "h": 3,
-        "w": 2,
-        "x": 11,
-        "y": 4
+        "w": 4,
+        "x": 0,
+        "y": 13
       },
       "id": 14,
       "interval": null,
@@ -1175,10 +1571,12 @@
       "mappingType": 1,
       "mappingTypes": [
         {
+          "$$hashKey": "object:3415",
           "name": "value to text",
           "value": 1
         },
         {
+          "$$hashKey": "object:3416",
           "name": "range to text",
           "value": 2
         }
@@ -1206,44 +1604,416 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "powerSupplyStatus{hostname=\"$node\", powerSupplyIndex=\"1\"}",
+          "exemplar": true,
+          "expr": "powerSupplyStatus{instance=~\"$node\", powerSupplyIndex=\"1\"}",
           "format": "time_series",
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "A"
         }
       ],
       "thresholds": "4,6",
-      "title": "PS1",
+      "title": "PowerSupply1",
       "type": "singlestat",
       "valueFontSize": "80%",
       "valueMaps": [
         {
+          "$$hashKey": "object:3418",
           "op": "=",
           "text": "Other",
           "value": "1"
         },
         {
+          "$$hashKey": "object:3419",
           "op": "=",
           "text": "Unknown",
           "value": "2"
         },
         {
+          "$$hashKey": "object:3420",
           "op": "=",
           "text": "OK",
           "value": "3"
         },
         {
+          "$$hashKey": "object:3421",
           "op": "=",
           "text": "nonCritical",
           "value": "4"
         },
         {
+          "$$hashKey": "object:3422",
           "op": "=",
           "text": "Critical",
           "value": "5"
         },
         {
+          "$$hashKey": "object:3423",
+          "op": "=",
+          "text": "nonRecoverable",
+          "value": "6"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#56A64B",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 4,
+        "y": 13
+      },
+      "id": 16,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:3363",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:3364",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "powerSupplyStatus{instance=~\"$node\", powerSupplyIndex=\"2\"}",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "4,6",
+      "title": "PowerSupply2",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3366",
+          "op": "=",
+          "text": "Other",
+          "value": "1"
+        },
+        {
+          "$$hashKey": "object:3367",
+          "op": "=",
+          "text": "Unknown",
+          "value": "2"
+        },
+        {
+          "$$hashKey": "object:3368",
+          "op": "=",
+          "text": "OK",
+          "value": "3"
+        },
+        {
+          "$$hashKey": "object:3369",
+          "op": "=",
+          "text": "nonCritical",
+          "value": "4"
+        },
+        {
+          "$$hashKey": "object:3370",
+          "op": "=",
+          "text": "Critical",
+          "value": "5"
+        },
+        {
+          "$$hashKey": "object:3371",
+          "op": "=",
+          "text": "nonRecoverable",
+          "value": "6"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#56A64B",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 8,
+        "y": 13
+      },
+      "id": 46,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:3363",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:3364",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "powerSupplyStatus{instance=~\"$node\", powerSupplyIndex=\"3\"}",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "4,6",
+      "title": "PowerSupply3",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3366",
+          "op": "=",
+          "text": "Other",
+          "value": "1"
+        },
+        {
+          "$$hashKey": "object:3367",
+          "op": "=",
+          "text": "Unknown",
+          "value": "2"
+        },
+        {
+          "$$hashKey": "object:3368",
+          "op": "=",
+          "text": "OK",
+          "value": "3"
+        },
+        {
+          "$$hashKey": "object:3369",
+          "op": "=",
+          "text": "nonCritical",
+          "value": "4"
+        },
+        {
+          "$$hashKey": "object:3370",
+          "op": "=",
+          "text": "Critical",
+          "value": "5"
+        },
+        {
+          "$$hashKey": "object:3371",
+          "op": "=",
+          "text": "nonRecoverable",
+          "value": "6"
+        }
+      ],
+      "valueName": "avg"
+    },
+    {
+      "cacheTimeout": null,
+      "colorBackground": true,
+      "colorValue": false,
+      "colors": [
+        "#56A64B",
+        "rgba(237, 129, 40, 0.89)",
+        "#d44a3a"
+      ],
+      "datasource": "$datasource",
+      "fieldConfig": {
+        "defaults": {},
+        "overrides": []
+      },
+      "format": "none",
+      "gauge": {
+        "maxValue": 100,
+        "minValue": 0,
+        "show": false,
+        "thresholdLabels": false,
+        "thresholdMarkers": true
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 4,
+        "x": 12,
+        "y": 13
+      },
+      "id": 47,
+      "interval": null,
+      "links": [],
+      "mappingType": 1,
+      "mappingTypes": [
+        {
+          "$$hashKey": "object:3363",
+          "name": "value to text",
+          "value": 1
+        },
+        {
+          "$$hashKey": "object:3364",
+          "name": "range to text",
+          "value": 2
+        }
+      ],
+      "maxDataPoints": 100,
+      "nullPointMode": "connected",
+      "nullText": null,
+      "postfix": "",
+      "postfixFontSize": "50%",
+      "prefix": "",
+      "prefixFontSize": "50%",
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "sparkline": {
+        "fillColor": "rgba(31, 118, 189, 0.18)",
+        "full": false,
+        "lineColor": "rgb(31, 120, 193)",
+        "show": false
+      },
+      "tableColumn": "",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "powerSupplyStatus{instance=~\"$node\", powerSupplyIndex=\"4\"}",
+          "format": "time_series",
+          "instant": true,
+          "interval": "",
+          "intervalFactor": 1,
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "thresholds": "4,6",
+      "title": "PowerSupply4",
+      "type": "singlestat",
+      "valueFontSize": "80%",
+      "valueMaps": [
+        {
+          "$$hashKey": "object:3366",
+          "op": "=",
+          "text": "Other",
+          "value": "1"
+        },
+        {
+          "$$hashKey": "object:3367",
+          "op": "=",
+          "text": "Unknown",
+          "value": "2"
+        },
+        {
+          "$$hashKey": "object:3368",
+          "op": "=",
+          "text": "OK",
+          "value": "3"
+        },
+        {
+          "$$hashKey": "object:3369",
+          "op": "=",
+          "text": "nonCritical",
+          "value": "4"
+        },
+        {
+          "$$hashKey": "object:3370",
+          "op": "=",
+          "text": "Critical",
+          "value": "5"
+        },
+        {
+          "$$hashKey": "object:3371",
           "op": "=",
           "text": "nonRecoverable",
           "value": "6"
@@ -1258,7 +2028,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 7
+        "y": 16
       },
       "id": 28,
       "panels": [],
@@ -1274,10 +2044,10 @@
       },
       "fontSize": "100%",
       "gridPos": {
-        "h": 8,
+        "h": 6,
         "w": 24,
         "x": 0,
-        "y": 8
+        "y": 17
       },
       "id": 22,
       "links": [],
@@ -1290,6 +2060,7 @@
       },
       "styles": [
         {
+          "$$hashKey": "object:938",
           "alias": "Time",
           "align": "auto",
           "dateFormat": "YYYY-MM-DD HH:mm:ss",
@@ -1297,6 +2068,7 @@
           "type": "hidden"
         },
         {
+          "$$hashKey": "object:939",
           "alias": "Size",
           "align": "auto",
           "colorMode": null,
@@ -1314,6 +2086,7 @@
           "unit": "mbytes"
         },
         {
+          "$$hashKey": "object:940",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1331,6 +2104,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:941",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1348,6 +2122,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:942",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1365,6 +2140,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:943",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1382,6 +2158,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:944",
           "alias": "Model",
           "align": "auto",
           "colorMode": null,
@@ -1399,6 +2176,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:945",
           "alias": "Serial",
           "align": "auto",
           "colorMode": null,
@@ -1416,6 +2194,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:946",
           "alias": "Location",
           "align": "auto",
           "colorMode": null,
@@ -1433,6 +2212,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:947",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1450,6 +2230,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:948",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1467,6 +2248,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:949",
           "alias": "Size",
           "align": "auto",
           "colorMode": null,
@@ -1484,6 +2266,7 @@
           "unit": "mbytes"
         },
         {
+          "$$hashKey": "object:950",
           "alias": "Status",
           "align": "auto",
           "colorMode": "cell",
@@ -1504,32 +2287,39 @@
           "unit": "short",
           "valueMaps": [
             {
+              "$$hashKey": "object:1075",
               "text": "Other",
               "value": "1"
             },
             {
+              "$$hashKey": "object:1076",
               "text": "Unknown",
               "value": "2"
             },
             {
+              "$$hashKey": "object:1077",
               "text": "OK",
               "value": "3"
             },
             {
+              "$$hashKey": "object:1078",
               "text": "Non-critical",
               "value": "4"
             },
             {
+              "$$hashKey": "object:1079",
               "text": "Critical",
               "value": "5"
             },
             {
+              "$$hashKey": "object:1080",
               "text": "Non-recoverable",
               "value": "6"
             }
           ]
         },
         {
+          "$$hashKey": "object:951",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1547,6 +2337,7 @@
           "unit": "short"
         },
         {
+          "$$hashKey": "object:952",
           "alias": "",
           "align": "auto",
           "colorMode": null,
@@ -1566,19 +2357,24 @@
       ],
       "targets": [
         {
-          "expr": "(physicalDiskCapacityInMB{hostname=\"$node\"}) + on (physicalDiskNumber) group_left(physicalDiskDisplayName) (physicalDiskDisplayName{hostname=\"$node\"}) + on (physicalDiskNumber) group_left(physicalDiskProductID) (physicalDiskProductID{hostname=\"$node\"})  + on (physicalDiskNumber) group_left(physicalDiskSerialNo) (physicalDiskSerialNo{hostname=\"$node\"}) ",
+          "exemplar": true,
+          "expr": "(physicalDiskCapacityInMB{instance=~\"$node\"}) + on (physicalDiskNumber) group_left(physicalDiskDisplayName) (physicalDiskDisplayName{instance=~\"$node\"}) + on (physicalDiskNumber) group_left(physicalDiskProductID) (physicalDiskProductID{instance=~\"$node\"})  + on (physicalDiskNumber) group_left(physicalDiskSerialNo) (physicalDiskSerialNo{instance=~\"$node\"}) ",
           "format": "table",
           "hide": false,
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
           "legendFormat": "",
           "refId": "A"
         },
         {
-          "expr": "physicalDiskComponentStatus{hostname=\"$node\"}",
+          "exemplar": true,
+          "expr": "physicalDiskComponentStatus{instance=~\"$node\"}",
           "format": "table",
           "instant": true,
+          "interval": "",
           "intervalFactor": 1,
+          "legendFormat": "",
           "refId": "B"
         }
       ],
@@ -1587,7 +2383,7 @@
       "type": "table-old"
     }
   ],
-  "refresh": "5s",
+  "refresh": false,
   "schemaVersion": 27,
   "style": "dark",
   "tags": [
@@ -1646,8 +2442,8 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "$datasource",
-        "definition": "label_values(up{device_type=\"$type\"}, hostname)",
+        "datasource": "${DS_PROMETHEUS-1}",
+        "definition": "globalSystemStatus",
         "description": null,
         "error": null,
         "hide": 0,
@@ -1657,11 +2453,11 @@
         "name": "node",
         "options": [],
         "query": {
-          "query": "label_values(up{device_type=\"$type\"}, hostname)",
+          "query": "globalSystemStatus",
           "refId": "StandardVariableQuery"
         },
         "refresh": 1,
-        "regex": "",
+        "regex": "/instance=\"([^\"]+)\"/",
         "skipUrlSync": false,
         "sort": 0,
         "tagValuesQuery": "",
@@ -1704,5 +2500,5 @@
   "timezone": "Asia/Ho_Chi_Minh",
   "title": "IDrac Dell Server",
   "uid": "__mlkoYik",
-  "version": 9
+  "version": 23
 }
